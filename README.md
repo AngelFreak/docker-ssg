@@ -1,3 +1,4 @@
+[![Build Status](https://cloud.drone.io/api/badges/AngelFreak/docker-ssg/status.svg)](https://cloud.drone.io/AngelFreak/docker-ssg)
 # docker-ssg
 
 Docker image for ssg static site generator (https://www.romanzolotarev.com/ssg.html)
