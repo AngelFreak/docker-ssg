@@ -10,4 +10,7 @@ steps:
     password:
       from_secret: docker_password
     repo: angelfreak/docker-ssg
-    tags: latest
+    tags:
+    - latest
+    - '4'
+    - '4.0'
