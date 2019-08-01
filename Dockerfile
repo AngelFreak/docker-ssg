@@ -11,10 +11,11 @@ ENV URL=https://www
 COPY ./run.sh /run.sh
 
 # Add the required packages
-RUN apk add --update wget build-base bsd-compat-headers \
+RUN apk --update add --no-cache wget build-base bsd-compat-headers \
     && apk upgrade \
     && apk add --no-cache ca-certificates
 
+# Get and install lowdown
 ADD https://kristaps.bsd.lv/lowdown/snapshots/lowdown.tar.gz /tmp
 RUN tar -xf /tmp/lowdown.tar.gz -C /tmp \
     && cd /tmp/lowdown* \
@@ -25,9 +26,9 @@ RUN tar -xf /tmp/lowdown.tar.gz -C /tmp \
 RUN mkdir -p bin
 
 # Get ssg from the source!
-RUN wget -O bin/ssg3 https://www.romanzolotarev.com/bin/ssg3
+RUN wget -O bin/ssg4 https://www.romanzolotarev.com/bin/ssg4
 # Well make it executable...
-RUN chmod +x bin/ssg3
+RUN chmod +x bin/ssg4
 
 # Create the proper folders
 RUN mkdir /src /dst
@@ -35,6 +36,11 @@ RUN mkdir /src /dst
 # Makes the folders accessable as volumes
 VOLUME /src
 VOLUME /dst
+
+# Cleanup
+RUN apk del wget build-base \
+    && rm /tmp/lowdown.tar.gz \
+    && rm -rf /tmp/lowdown
 
 # Go go go!!!
 CMD ["/run.sh"]
