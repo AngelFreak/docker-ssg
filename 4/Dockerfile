@@ -8,7 +8,7 @@ ENV SITE=test
 ENV URL=https://www
 
 # Copy run script
-COPY ./run.sh /run.sh
+COPY 4/run.sh /run.sh
 
 # Add the required packages
 RUN apk --update add --no-cache wget build-base bsd-compat-headers \
