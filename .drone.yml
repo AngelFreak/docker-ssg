@@ -2,7 +2,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: docker
+- name: ssg3-build
   image: plugins/docker
   settings:
     username:
@@ -15,7 +15,7 @@ steps:
     - '3.0.1'
     dockerfile: 3/Dockerfile
 
-- name: docker
+- name: ssg4-build
   image: plugins/docker
   settings:
     username:
