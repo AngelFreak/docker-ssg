@@ -11,6 +11,20 @@ steps:
       from_secret: docker_password
     repo: angelfreak/docker-ssg
     tags:
+    - '3'
+    - '3.0.1'
+    dockerfile: 3/Dockerfile
+
+- name: docker
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo: angelfreak/docker-ssg
+    tags:
     - latest
     - '4'
-    - '4.0'
+    - '4.0.1'
+    dockerfile: 4/Dockerfile
