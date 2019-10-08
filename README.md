@@ -3,6 +3,15 @@
 
 Docker image for ssg static site generator (https://www.romanzolotarev.com/ssg.html)
 
+# Supported tags and respective `Dockerfile` links
+
+-	[`5.0.0`, `5.0`, `5`, `latest`](https://github.com/AngelFreak/docker-ssg/blob/master/3/Dockerfile)
+-	[`4.0.1`, `4.0`, `4`](https://github.com/AngelFreak/docker-ssg/blob/master/4/Dockerfile)
+-	[`3.0.1`, `3.0`, `3`](https://github.com/AngelFreak/docker-ssg/blob/master/3/Dockerfile)
+
+## Versions
+I try to follow Romans releases, so if you download version 4, it's also version 4 of SSG.
+
 ## Environment Variables
 
 * `SITE`
