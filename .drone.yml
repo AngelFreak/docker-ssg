@@ -28,3 +28,17 @@ steps:
     - '4'
     - '4.0.1'
     dockerfile: 4/Dockerfile
+
+- name: ssg5-build
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo: angelfreak/docker-ssg
+    tags:
+    - latest
+    - '5'
+    - '5.0.1'
+    dockerfile: 5/Dockerfile
