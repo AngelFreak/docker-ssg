@@ -5,12 +5,10 @@ Docker image for ssg static site generator (https://www.romanzolotarev.com/ssg.h
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.0.1`, `5.0`, `5`, `latest`](https://github.com/AngelFreak/docker-ssg/blob/master/3/Dockerfile)
--	[`4.0.2`, `4.0`, `4`](https://github.com/AngelFreak/docker-ssg/blob/master/4/Dockerfile)
--	[`3.0.2`, `3.0`, `3`](https://github.com/AngelFreak/docker-ssg/blob/master/3/Dockerfile)
+-	[`5.0.0`, `5.0`, `5`, `latest`](https://github.com/AngelFreak/docker-ssg/blob/main/Dockerfile)
 
 ## Versions
-I try to follow Romans releases, so if you download version 4, it's also version 4 of SSG.
+I try to follow Romans releases, so if you download version 5, it's also version 5 of SSG.
 
 ## Environment Variables
 
@@ -18,12 +16,12 @@ I try to follow Romans releases, so if you download version 4, it's also version
 * `URL`
 
 ## Executing
-    docker run -v $(pwd):/src -v /usr/local/nginx/html:/dst -e SITE=mysite -e URL=myurl angelfreak/ssg
+    docker run -v $(pwd):/src -v $(pwd):/dst -e SITE=mysite -e URL=myurl angelfreak/ssg
 
 ## Building The Image Yourself (optional)
-The image is a bit, big **around 165 MB** it uses [alpine](http://gliderlabs.viewdocs.io/docker-alpine):
+The image is based on [alpine](http://gliderlabs.viewdocs.io/docker-alpine):
 
     docker build -t angelfreak/ssg:latest .
 
         docker images | grep ssg
-            angelfreak/ssg   latest              7eb6fdfd20c9        32 second ago      162 MB
+            angelfreak/ssg   latest              4f31e7b582bd        21 minutes ago      4.79MB
