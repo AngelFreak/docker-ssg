@@ -9,6 +9,7 @@ Docker image for ssg static site generator (https://www.romanzolotarev.com/ssg.h
 
 ## Versions
 I try to follow Romans releases, so if you download version 5, it's also version 5 of SSG.
+In version 5.x.x lowdown 0.7.4 is used.
 
 ## Environment Variables
 
