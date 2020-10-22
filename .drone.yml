@@ -2,34 +2,6 @@ kind: pipeline
 name: default
 
 steps:
-- name: ssg3-build
-  image: plugins/docker
-  settings:
-    username:
-      from_secret: docker_username
-    password:
-      from_secret: docker_password
-    repo: angelfreak/docker-ssg
-    tags:
-    - '3'
-    - '3.0'
-    - '3.0.2'
-    dockerfile: 3/Dockerfile
-
-- name: ssg4-build
-  image: plugins/docker
-  settings:
-    username:
-      from_secret: docker_username
-    password:
-      from_secret: docker_password
-    repo: angelfreak/docker-ssg
-    tags:
-    - '4'
-    - '4.0'
-    - '4.0.2'
-    dockerfile: 4/Dockerfile
-
 - name: ssg5-build
   image: plugins/docker
   settings:
@@ -42,5 +14,5 @@ steps:
     - latest
     - '5'
     - '5.0'
-    - '5.0.1'
-    dockerfile: 5/Dockerfile
+    - '5.0.0'
+    dockerfile: Dockerfile
